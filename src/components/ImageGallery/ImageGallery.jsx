@@ -6,7 +6,6 @@ import s from '../ImageGallery/ImageGallery.module.scss';
 export class ImageGallery extends Component {
   render() {
     const { images } = this.props;
-    console.log(images);
 
     return (
       <ul className={s.imageGallery}>

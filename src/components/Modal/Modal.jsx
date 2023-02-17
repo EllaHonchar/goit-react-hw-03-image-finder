@@ -1,5 +1,6 @@
 import { createPortal } from 'react-dom';
 import { Component } from 'react';
+import PropTypes from 'prop-types';
 import s from './Modal.module.scss';
 
 export class Modal extends Component {
@@ -27,10 +28,16 @@ export class Modal extends Component {
     return createPortal(
       <div className={s.overlay} onClick={this.handleBackdropClick}>
         <div className={s.modal}>
-          <img src={this.props.largeImageURL} alt={this.props.alt} />
+          <img src={this.props.largeImageURL} alt={this.props.tags} />
         </div>
       </div>,
       document.getElementById('modal')
     );
   }
 }
+
+Modal.propTypes = {
+  onClose: PropTypes.func.isRequired,
+  largeImageURL: PropTypes.string.isRequired,
+  tags: PropTypes.string.isRequired,
+};

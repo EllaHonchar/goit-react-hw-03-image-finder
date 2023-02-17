@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Searchbar } from './Searchbar/Searchbar';
 import { ImageGallery } from './ImageGallery/ImageGallery';
-import { galleryImageDataFetch } from './services/galleryImages';
+import { galleryImageDataFetch } from '../services/galleryImages';
 import Button from './Button/Button';
 import Loader from './Loader/Loader';
 
@@ -16,8 +16,6 @@ export class App extends Component {
     page: 1,
     perPage: 12,
   };
-
-  // key: '32917844-8e8c51c8f603babcea5f94901',
 
   handleSubmit = q => {
     this.setState({
@@ -65,18 +63,3 @@ export class App extends Component {
     );
   }
 }
-
-// images={this.props.state.images}
-
-// async componentDidUpdate(prevProps, prevState) {
-//   const { q } = this.state;
-//   try {
-//     if (q !== prevState.q) {
-//       const response = await galleryImageDataFetch(this.state.q);
-//       const data = await response.json();
-//       this.setState({ images: data.hits, isloading: false });
-//     }
-//   } catch (error) {
-//     this.setState({ error, isloading: true });
-//   }
-// }

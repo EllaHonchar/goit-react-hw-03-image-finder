@@ -28,6 +28,7 @@ export class ImageGalleryItem extends Component {
           <Modal
             onClose={this.handleToggleModal}
             largeImageURL={largeImageURL}
+            tags={tags}
           />
         )}
       </li>
