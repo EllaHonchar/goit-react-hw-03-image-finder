@@ -1,0 +1,19 @@
+.button {
+  width: 155px;
+  text-align: center;
+  background-color: aquamarine;
+  color: rgb(35, 106, 220);
+  margin-bottom: 20px;
+  height: 25px;
+  border-radius: 5px;
+  border: none;
+  &:hover {
+    cursor: pointer;
+  }
+}
+.div {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
